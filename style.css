@@ -1,13 +1,17 @@
 body {
-    display:flex;
-    flex-direction: column;
     font-family: Roboto, Arial, sans-serif;
     width: 100vw;
     height: 100vh;
-    margin: 0;
 }
 
-h6, h2, a, ul, li, p, div{
+h6,
+h2,
+a, 
+ul, 
+li, 
+p, 
+div, 
+body{
     margin: 0;
     padding: 0;
 }
@@ -16,43 +20,74 @@ a {
    text-decoration: none; 
 }
 
+body,
+.action div,
+.container,
+.information{
+    display:flex;
+    flex-direction: column;
+}
 
-.presentation{
+.presentation, 
+.action, 
+header{
     display: flex;
     justify-content: space-around;
+}
 
+.presentation{
     max-height: fit-content;
+
+    div.items,
+    img{
+        flex:1;
+        max-width: 30%;   
+    }
     
     div.items{
         flex-direction: column;
-        flex: 1;
-        max-width: 30%;
     }
 
     img{
-        flex: 1;
         background-color: #a9abb1;
         color: #F9FAF8;
         text-align: center;
-        align-content: center;
-        max-width: 30%;      
+        align-content: center;   
     }
 }
 
-header{
-    display:flex;
-    justify-content: space-around;
+.action, 
+header, 
+.information{
     align-items: center;
 }
 
-header, footer, .presentation, .action{
+.action, 
+button{
+    border-radius: 12px;
+}
+
+.action{
+    margin: 10px 20%;
+
+    div {
+        justify-content: center;
+    }
+}
+
+header, 
+footer, 
+.presentation, 
+.action{
     *{
         font-size: 18px;
         color: #E5E7EB;
     }
 }
 
-header, footer, .presentation{
+header, 
+footer, 
+.presentation{
     background-color: #1F2937;
 
     h2{
@@ -62,7 +97,8 @@ header, footer, .presentation{
     }
 }
 
-header, footer{
+header, 
+footer{
     flex-shrink: 0;
 }
 
@@ -86,23 +122,18 @@ header, footer{
     color: #F9FAF8;
 }
 
-.container{
-    display: flex;
-    flex-direction: column;
-}
-
 div div {
     padding: 24px;
 }
 
-button, .action{
+button, 
+.action{
     background-color: #3882F6;
 }
 
 button{
     width: fit-content;
     padding: 4px 12px;
-    border-radius: 12px;
     border-style: solid;
     flex: none;
     border-color: #F9FAF8;
@@ -112,10 +143,13 @@ button{
     }
 }
 
+.quote,
+.information{
+    flex: auto;
+}
+
 .quote{
     background-color: #E5E7EB;
-    flex: auto;
-
     font-size: 36px;
     color: #1F2937;
 
@@ -131,11 +165,6 @@ button{
 }
 
 .information{
-    flex: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
     h2 {
         font-size: 36px;
         color: #1F2937;
@@ -159,20 +188,6 @@ button{
         }
     }
     
-}
-
-.action{
-    margin: 10px 20%;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-
-    div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
 }
 
 footer{
