@@ -1,0 +1,1 @@
+This project is a sample landing page, made with flexbox
