@@ -7,8 +7,9 @@ body {
     margin: 0;
 }
 
-h2 {
+h6, h2, a, ul, li, p, div{
     margin: 0;
+    padding: 0;
 }
 
 a {
@@ -21,6 +22,17 @@ a {
     
     div.items{
         flex-direction: column;
+        flex: 1;
+        max-width: 30%;
+    }²
+
+    img{
+        flex: 1;
+        background-color: #a9abb1;
+        color: #F9FAF8;
+        text-align: center;
+        align-content: center;
+        max-width: 30%;
     }
 }
 
@@ -59,6 +71,11 @@ header, footer{
     display:flex;
     list-style: none;
     gap: 12px;
+
+    .information & {
+        gap: 18px;
+        margin: auto;
+    }
 }
 
 .logo{
@@ -79,3 +96,58 @@ button, .action{
     background-color: #3882F6;
 }
 
+button{
+    width: fit-content;
+    padding: 4px 12px;
+    border-radius: 12px;
+    border-style: solid;
+    flex: none;
+    border-color: #F9FAF8;
+
+    .items & {
+        border-color: #1F2937;
+    }
+}
+
+.quote{
+    background-color: #E5E7EB;
+    flex: auto;
+}
+
+.information{
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    li{
+        flex-shrink: 0;
+
+        img{
+            border: #3882F6 solid 2px;
+            border-radius: 10px;
+            padding: 50px 75px;
+            display: inline-block;
+        }
+
+        p{
+            margin-inline: auto;
+            text-align: center;
+            max-width: 150px;
+        }
+    }
+    
+}
+
+.action{
+    margin: 10px 20%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
